@@ -2,6 +2,7 @@ package com.example.android.practiceset2;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,42 +12,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // PASTE CODE YOU WANT TO TEST HERE
-        int weekday = 5;
-        int weekend = 9;
-        int optimalHours = 7 * 8;
 
-        int actualHours = 5 * weekday;
-        actualHours = actualHours + weekend * 2;
-        int solution = optimalHours - actualHours;
-        display(solution);
     }
 
-    /**
-     * Display methods that allow the text to appear on the screen. Don't worry if you don't know
-     * how these work yet. We'll be covering them in lesson 3.
-     */
-
-    public void display(String text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view);
-        t.setText(text);
+    public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView.setText(String.valueOf(score));
     }
 
-    public void display(int text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view);
-        t.setText(text + "");
+
+    public void threePoints (View view){
+
+        displayForTeamA(3);
+
     }
 
-    public void display1(String text) {
-        display(text);
+    public void twoPoints (View view){
+
+        displayForTeamA(2);
+
     }
 
-    public void display2(String text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view_2);
-        t.setText(text);
+    public void freeThrow (View view){
+
+        displayForTeamA(1);
+
     }
 
-    public void display3(String text) {
-        TextView t = (TextView) findViewById(R.id.display_text_view_3);
-        t.setText(text);
-    }
 }
