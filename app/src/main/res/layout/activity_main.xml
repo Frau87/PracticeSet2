@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Free Throw"
-        android:onClick="freeThrow0.2"
+        android:onClick="freeThrow"
         android:layout_margin="8dp"/>
 
 </LinearLayout>

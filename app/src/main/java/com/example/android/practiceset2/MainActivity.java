@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    int scoreTeamA = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void threePoints (View view){
 
-        displayForTeamA(3);
+        scoreTeamA += 3;
+        displayForTeamA(scoreTeamA);
 
     }
 
